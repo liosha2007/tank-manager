@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(648, 380);
             this.Name = "Form1";
             this.Text = "Менеджер игры \"Танковый армагедон\"";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

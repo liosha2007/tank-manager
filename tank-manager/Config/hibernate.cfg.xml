@@ -1,0 +1,19 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<hibernate-configuration>
+  <session-factory xmlns="urn:nhibernate-configuration-2.2">
+    <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+    <property name="connection.driver_class">NHibernate.Driver.MySqlDataDriver</property>
+    <property name="dialect">NHibernate.Dialect.MySQL5Dialect</property>
+    <property name="connection.connection_string">Server=liosha.heliohost.org;Database=liosha_nhtest;User ID=liosha_nhtest;Password=liosha_nhtest@;</property>
+    <property name="hbm2ddl.auto">update</property>
+
+    <mapping resource="tank_manager.Crawler.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Engine.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Modules.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Patron.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Radio.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Tank.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Tool.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Tower.hbm.xml" assembly="tank-manager" />
+  </session-factory>
+</hibernate-configuration>

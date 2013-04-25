@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="tank_manager.Domain" assembly="tank-manager">
+  <class name="Tool" table="Tool">
+    <id name="id" unsaved-value="0">
+      <column name="id" not-null="true" />
+      <generator class="identity"/>
+    </id>
+    <property name="level" />
+    <property name="name" />
+    <one-to-one name="patron" class="Patron" cascade="all" constrained="true" fetch="select" />
+    <property name="rate" />
+    <property name="disorder" />
+    <property name="reduction" />
+    <property name="massa" />
+    <property name="price" />
+    <property name="experience" />
+    <property name="ammunition" />
+    <property name="reservation" />
+    <property name="stowage" />
+  </class>
+</hibernate-mapping>

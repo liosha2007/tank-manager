@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="tank_manager.Domain" assembly="tank-manager">
+  <class name="Engine" table="Engine">
+    <id name="id" unsaved-value="0">
+      <column name="id" not-null="true" />
+      <generator class="identity"/>
+    </id>
+    <property name="level" />
+    <property name="name" />
+    <property name="reservation" />
+    <property name="power" />
+    <property name="fire" />
+    <property name="massa" />
+    <property name="price" />
+    <property name="experience" />
+  </class>
+</hibernate-mapping>
