@@ -7,13 +7,13 @@
     <property name="connection.connection_string">Server=liosha.heliohost.org;Database=liosha_nhtest;User ID=liosha_nhtest;Password=liosha_nhtest@;</property>
     <property name="hbm2ddl.auto">update</property>
 
-    <mapping resource="tank_manager.Crawler.hbm.xml" assembly="tank-manager" />
-    <mapping resource="tank_manager.Engine.hbm.xml" assembly="tank-manager" />
-    <mapping resource="tank_manager.Modules.hbm.xml" assembly="tank-manager" />
-    <mapping resource="tank_manager.Patron.hbm.xml" assembly="tank-manager" />
-    <mapping resource="tank_manager.Radio.hbm.xml" assembly="tank-manager" />
-    <mapping resource="tank_manager.Tank.hbm.xml" assembly="tank-manager" />
-    <mapping resource="tank_manager.Tool.hbm.xml" assembly="tank-manager" />
-    <mapping resource="tank_manager.Tower.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Mappings.Crawler.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Mappings.Engine.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Mappings.Modules.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Mappings.Patron.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Mappings.Radio.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Mappings.Tank.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Mappings.Tool.hbm.xml" assembly="tank-manager" />
+    <mapping resource="tank_manager.Mappings.Tower.hbm.xml" assembly="tank-manager" />
   </session-factory>
 </hibernate-configuration>
