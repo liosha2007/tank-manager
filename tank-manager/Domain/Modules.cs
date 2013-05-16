@@ -7,9 +7,14 @@ namespace tank_manager.Domain
 {
     class Modules : Entity
     {
-        private ModuleType _moduleType;
-        private double _prchit;
-        private double _prcdeter;
+        public const string MODULE_TYPE = "moduleType";
+        public const string LEVEL = "level";
+
+        public virtual int level
+        {
+            get;
+            set;
+        }
 
         public virtual ModuleType moduleType
         {

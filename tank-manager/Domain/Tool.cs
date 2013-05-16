@@ -7,19 +7,6 @@ namespace tank_manager.Domain
 {
     class Tool : Entity
     {
-        private int _level;
-        private string _name;
-        private Patron _patron;
-        private double _rate;
-        private double _disorder;
-        private double _reduction;
-        private double _massa;
-        private int _price;
-        private int _experience;
-        private int _ammunition;
-        private int _reservation;
-        private double _stowage;
-
         public virtual int level
         {
             get;
@@ -30,7 +17,7 @@ namespace tank_manager.Domain
             get;
             set;
         }
-        public virtual Patron patron
+        public virtual IList<Patron> patrons
         {
             get;
             set;
@@ -79,6 +66,11 @@ namespace tank_manager.Domain
         {
             get;
             set;
+        }
+
+        public override string ToString()
+        {
+            return (name == null) ? string.Empty : name;
         }
     }
 }

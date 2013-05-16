@@ -7,12 +7,6 @@ namespace tank_manager.Domain
 {
     class Patron : Entity
     {
-        private string _name;
-        private int _calibre;
-        private int _probity;
-        private int _damage;
-        private int _price;
-
         public virtual string name
         {
             get;
@@ -41,6 +35,11 @@ namespace tank_manager.Domain
         {
             get;
             set;
+        }
+
+        public override string ToString()
+        {
+            return (name == null) ? string.Empty : name;
         }
     }
 }

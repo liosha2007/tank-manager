@@ -7,15 +7,6 @@ namespace tank_manager.Domain
 {
     class Crawler : Entity
     {
-        private int _level;
-        private string _name;
-        private int _reservation;
-        private double _massa;
-        private int _price;
-        private int _experience;
-        private double _charge;
-        private int _turn;
-
         public virtual int level
         {
             get;
@@ -62,6 +53,11 @@ namespace tank_manager.Domain
         {
             get;
             set;
+        }
+
+        public override string ToString()
+        {
+            return (name == null) ? string.Empty : name;
         }
     }
 }

@@ -7,46 +7,31 @@ namespace tank_manager.Domain
 {
     class Tank : Entity
     {
-        private Tool _tool;
-        private Tower _tower;
-        private Engine _engine;
-        private Crawler _crawler;
-        private Radio _radio;
-        private int _price;
-        private string _name;
-        private int _experience;
-        private int _strength;
-        private double _massa;
-        private int _reservation;
-        private int _speed;
-        private int _turning;
-        private int _level;
-
-        public virtual Tool tool
+        public virtual IList<Tool> tools
         {
             get;
             set;
         }
 
-        public virtual Tower tower
+        public virtual IList<Tower> towers
         {
             get;
             set;
         }
 
-        public virtual Engine engine
+        public virtual IList<Engine> engins
         {
             get;
             set;
         }
 
-        public virtual Crawler crawler
+        public virtual IList<Crawler> crawlers
         {
             get;
             set;
         }
 
-        public virtual Radio radio
+        public virtual IList<Radio> radios
         {
             get;
             set;
@@ -104,6 +89,11 @@ namespace tank_manager.Domain
         {
             get;
             set;
+        }
+
+        public override string ToString()
+        {
+            return (name == null) ? string.Empty : name;
         }
     }
 }

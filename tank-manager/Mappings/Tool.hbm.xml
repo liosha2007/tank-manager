@@ -1,13 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="tank_manager.Domain" assembly="tank-manager">
   <class name="Tool" table="Tool">
-    <id name="id" unsaved-value="0">
-      <column name="id" not-null="true" />
+    <id name="Id" unsaved-value="0">
+      <column name="Id" not-null="true" />
       <generator class="identity"/>
     </id>
     <property name="level" />
     <property name="name" />
-    <one-to-one name="patron" class="Patron" cascade="all" constrained="true" fetch="select" />
+    <list name="patrons" table="Tool_Patrons" lazy="false" cascade="none">
+      <key column="toolId" />
+      <index column="sIndex" type="Int32" />
+      <many-to-many column="patronId" class="Patron" />
+    </list>
     <property name="rate" />
     <property name="disorder" />
     <property name="reduction" />

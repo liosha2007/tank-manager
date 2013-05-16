@@ -1,15 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="tank_manager.Domain" assembly="tank-manager">
   <class name="Tank" table="Tank">
-    <id name="id" unsaved-value="0">
-      <column name="id" not-null="true" />
+    <id name="Id" unsaved-value="0">
+      <column name="Id" not-null="true" />
       <generator class="identity"/>
     </id>
-    <one-to-one name="tool" class="Tool" cascade="all" constrained="true" fetch="select" />
-    <one-to-one name="tower" class="Tower" cascade="all" constrained="true" fetch="select" />
-    <one-to-one name="engine" class="Engine" cascade="all" constrained="true" fetch="select" />
-    <one-to-one name="crawler" class="Crawler" cascade="all" constrained="true" fetch="select" />
-    <one-to-one name="radio" class="Radio" cascade="all" constrained="true" fetch="select" />
+    <list name="tools" table="Tank_Tool" lazy="false" cascade="none">
+      <key column="tankId" />
+      <index column="sIndex" type="Int32" />
+      <many-to-many column="toolId" class="Tool" />
+    </list>
+    <list name="towers" table="Tank_Tower" lazy="false" cascade="none">
+      <key column="tankId" />
+      <index column="sIndex" type="Int32" />
+      <many-to-many column="towerId" class="Tower" />
+    </list>
+    <list name="engins" table="Tank_Engine" lazy="false" cascade="none">
+      <key column="tankId" />
+      <index column="sIndex" type="Int32" />
+      <many-to-many column="engineId" class="Engine" />
+    </list>
+    <list name="crawlers" table="Tank_Crawler" lazy="false" cascade="none">
+      <key column="tankId" />
+      <index column="sIndex" type="Int32" />
+      <many-to-many column="crawlerId" class="Crawler" />
+    </list>
+    <list name="radios" table="Tank_Radio" lazy="false" cascade="none">
+      <key column="tankId" />
+      <index column="sIndex" type="Int32" />
+      <many-to-many column="radioId" class="Radio" />
+    </list>
     <property name="price" />
     <property name="name" />
     <property name="experience" />

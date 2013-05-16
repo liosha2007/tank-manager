@@ -7,12 +7,12 @@ namespace tank_manager.Domain
 {
     class Entity
     {
-        private long _id;
+        private long id;
 
-        public virtual long id
+        public virtual long Id
         {
-            get { return _id; }
-            protected set { _id = value; }
+            get { return id; }
+            protected set { id = value; }
         }
     }
 }
